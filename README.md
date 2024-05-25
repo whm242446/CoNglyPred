@@ -1,4 +1,4 @@
 # CoNglyPred
-CoNglyPred: accurate prediction of N-glycosylation sites by ESM-2 embedding and AlphaFold2 predicted structures
+CoNglyPred: accurate prediction of N-linked glycosylation sites using ESM-2 embedding and structural features with graph transformer network and co-attention
 
-![Figure 1](https://github.com/whm242446/CoNglyPred/assets/105725880/281f3d12-48bf-433e-9d84-f14f7348d03a)
+![Graphical abstract](https://github.com/whm242446/CoNglyPred/assets/105725880/26ca05e2-6a03-4b78-bf2e-4d7cd48a3568)
