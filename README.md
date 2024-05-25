@@ -4,7 +4,7 @@ CoNglyPred: accurate prediction of N-linked glycosylation sites using ESM-2 embe
 ![Graphical abstract](https://github.com/whm242446/CoNglyPred/assets/105725880/26ca05e2-6a03-4b78-bf2e-4d7cd48a3568)
 
 ## Model framework
-![Figure 1](https://github.com/whm242446/CoNglyPred/assets/105725880/de56c52b-131c-421f-b935-2f46737515b7)
+![Figure 1](https://github.com/whm242446/CoNglyPred/assets/105725880/19563308-dc3b-4c01-9435-a8539cb203b9)
 
 ## System requirement
 CoNglyPred is developed under Linux environment with:  
