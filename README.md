@@ -13,3 +13,5 @@ CoNglyPred is developed under Linux environment with:
 •	torch == 2.1.2  
 •	pytorch-lightning == 2.1.3  
 •	torch_geometric == 2.4.0  
+
+#You need to pay attention to the packages installed during the environment configuration:
