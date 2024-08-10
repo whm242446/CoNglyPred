@@ -19,7 +19,7 @@ pip install fair-esm
 ```
 # Usage
 ## Data Preprocessing
-First, we need to extract the features of proteins. 
+First, we need to extract the features of proteins.  
 1)plms features:
 ```
 # input protein fasta file
