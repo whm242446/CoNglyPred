@@ -25,14 +25,17 @@ First, we need to extract the features of proteins.
 # input protein fasta file
 run /data_preprocessing/ESM_representations.py
 ```
-2)one-hot features;
+2)one-hot features;  
 3)pssm features:
 ```
-1
+# using psi-blast tool; input protein fasta file
+os.system('psiblast -query ".../A001.fasta" -db .../BLAST/db/swissprot -evalue 0.001 -num_iterations 3 -out_ascii_pssm .../A001.pssm')
 ```
 4)physicochemical property features
 ```
-2
+# AAindex; For example(FAUJ880113)
+from aaindex import aaindex1
+full_record = aaindex1['FAUJ880113']
 ```
 5)dssp features
 ```
