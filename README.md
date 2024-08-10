@@ -19,22 +19,22 @@ pip install fair-esm
 ```
 ## Usage
 # Data Preprocessing
-First, we need to extract the features of proteins.
-1)plms features:
+First, we need to extract the features of proteins. 
+1) plms features:
 ```
 # input protein fasta file
 run /data_preprocessing/ESM_representations.py
 ```
-2)one-hot features;
-3)pssm features:
+2) one-hot features;
+3) pssm features:
 ```
 1
 ```
-4)physicochemical property features
+4) physicochemical property features
 ```
 2
 ```
-5)dssp features
+5) dssp features
 ```
 # input protein PDB file
 run /data_preprocessing/dssp.py
