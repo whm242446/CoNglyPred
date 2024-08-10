@@ -18,3 +18,10 @@ You need to pay attention to the packages installed during the environment confi
 pip install fair-esm
 ```
 ## Usage
+# Data Preprocessing
+First, we need to get the features extracted: plms features, one-hot features, pssm features, physicochemical property features, dssp features.
+1)plms features:input protein fasta file
+```
+run /data_preprocessing/ESM_representations.py
+```
+2)pssm features:
