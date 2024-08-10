@@ -6,17 +6,17 @@ from Bio import SeqIO
 
 from tqdm import tqdm
 
-
+# Using GPU devices
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 name = "/protein_complete.fasta"
 
-
+# Loading pre-trained models
 model, alphabet = esm.pretrained.esm2_t6_8M_UR50D()
 model = model.to(device)
 batch_converter = alphabet.get_batch_converter()
 model.eval()
 
-
+# Record samples of sequences with errors
 error_placeholders = []
 protein_data = {}
 for seq_record in tqdm(SeqIO.parse(name, "fasta"), desc="Processing Sequences"):
@@ -34,9 +34,9 @@ for seq_record in tqdm(SeqIO.parse(name, "fasta"), desc="Processing Sequences"):
 
         with torch.no_grad():
             results = model(batch_tokens, repr_layers=[33], return_contacts=True)
-
+            
+        # Taking the representation of the last layer as a protein characterisation
         token_representations = results["representations"][33].cpu().numpy()
-
         features = token_representations[0][1:-1]
 
         protein_data[placeholder] = {
@@ -53,4 +53,4 @@ for seq_record in tqdm(SeqIO.parse(name, "fasta"), desc="Processing Sequences"):
             del results
         if 'token_representations' in locals():
             del token_representations
-        torch.cuda.empty_cache()
+        torch.cuda.empty_cache() # Release GPU memory
