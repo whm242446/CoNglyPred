@@ -4,7 +4,7 @@ import numpy as np
 from tqdm import tqdm
 
 '''
-  根据PDB文件获取DSSP文件
+  Getting DSSP files from PDB files
 '''
 
 def check_or_create_folder(folder):
@@ -16,7 +16,7 @@ def check_or_create_folder(folder):
             return False
     return True
 
-
+# PDB folder & DSSP folder
 pdb_folder = '/PDB'
 output_folder = '/DSSP'
 
@@ -29,14 +29,14 @@ else:
         pdb_path = os.path.join(pdb_folder, filename)
         print(pdb_path)
         output_path = os.path.join(output_folder, filename.replace('.pdb', '.dssp'))
-
-        exit_code = os.system(f'mkdssp -v {pdb_path} {output_path}')
+      
+        exit_code = os.system(f'mkdssp -v {pdb_path} {output_path}')  # Using the mkdssp tool version 4.4.0
         if exit_code != 0:
             print(f"Error processing file {filename}. mkdssp exited with code {exit_code}.")
 
 
 '''
-  提取DSSP特征
+  Extracting structural features from DSSP files
 '''
 
 def process_dssp(dssp_file):
