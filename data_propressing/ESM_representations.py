@@ -11,7 +11,10 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 name = "/protein_complete.fasta"
 
 # Loading pre-trained models
-model, alphabet = esm.pretrained.esm2_t6_8M_UR50D()
+model, alphabet = esm.pretrained.esm2_t33_650M_UR50D()
+# model, alphabet = esm.pretrained.esm2_t12_35M_UR50D()
+# model, alphabet = esm.pretrained.esm2_t6_8M_UR50D()
+# ......
 model = model.to(device)
 batch_converter = alphabet.get_batch_converter()
 model.eval()
