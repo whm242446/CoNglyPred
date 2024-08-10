@@ -17,8 +17,8 @@ You need to pay attention to the packages installed during the environment confi
 ```
 pip install fair-esm
 ```
-## Usage
-# Data Preprocessing
+# Usage
+## Data Preprocessing
 First, we need to extract the features of proteins. 
 1)plms features:
 ```
@@ -39,3 +39,10 @@ run /data_preprocessing/ESM_representations.py
 # input protein PDB file
 run /data_preprocessing/dssp.py
 ```
+## Train&Test  
+1)Feature-based construction of protein graph datasets using ProteinGraphDataset
+2)Train CoNglyPred model:
+```
+run train.py
+```
+3)
