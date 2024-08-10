@@ -43,7 +43,7 @@ full_record = aaindex1['FAUJ880113']
 run /data_preprocessing/dssp.py
 ```
 ## Train&Test  
-1)Feature-based construction of protein graph datasets using ProteinGraphDataset
+1)Feature-based construction of protein graph datasets using ProteinGraphDataset;  
 2)Train CoNglyPred model:
 ```
 run train.py
