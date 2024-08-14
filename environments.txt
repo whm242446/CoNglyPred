@@ -1,0 +1,5 @@
+/home/inspur/whm409100220068/anaconda3
+/home/inspur/whm409100220068/anaconda3/envs/ngly
+/home/inspur/whm409100220068/anaconda3/envs/esmfold
+/home/inspur/whm409100220068/anaconda3/envs/esm
+/home/inspur/whm409100220068/anaconda3/envs/compar
