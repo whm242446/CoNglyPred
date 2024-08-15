@@ -47,9 +47,9 @@ run /data_preprocessing/dssp.py
 1)Feature-based construction of protein graph datasets using ProteinGraphDataset;  
 2)Train CoNglyPred model:
 ```
-run train.py
+run .../train.py
 ```
 3)Test CoNglyPred model using the best.pth
 ```
-run test.py
+run .../test.py
 ```
