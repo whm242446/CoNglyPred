@@ -49,4 +49,7 @@ run /data_preprocessing/dssp.py
 ```
 run train.py
 ```
-3)
+3)Test CoNglyPred model using the best.pth
+```
+run test.py
+```
