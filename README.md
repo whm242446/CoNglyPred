@@ -40,6 +40,7 @@ full_record = aaindex1['FAUJ880113']
 5)dssp features.
 ```
 # input protein PDB file
+# using mkdssp version(4.4.0) https://github.com/PDB-REDO/dssp/releases/tag/v4.4.0
 run /data_preprocessing/dssp.py
 ```
 ## Train&Test  
