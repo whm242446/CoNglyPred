@@ -20,7 +20,6 @@ else:
     print('CUDA is not available. Using CPU.')
 
 
-
 class CoAttentionModel(nn.Module):
     def __init__(self, node_num, num_features, plm_num, hidden_size, num_heads, dropout_prob, dropout_ratio=0.4) -> None:
         super().__init__()
@@ -32,7 +31,7 @@ class CoAttentionModel(nn.Module):
 
         self.SA = SelfAttention(hidden_size, num_heads, dropout_prob)
         self.Co = CrossAttention(hidden_size, num_heads, dropout_prob)        
-        self.plm_head = nn.Linear(1024, hidden_size)
+        self.plm_head = nn.Linear(1280, hidden_size)
         self.plm_layer_norm = nn.LayerNorm(hidden_size) 
         self.graphModel = GraphTransformerNet(net_params)
         self.graph_head = nn.Linear(num_features, hidden_size)
@@ -40,9 +39,7 @@ class CoAttentionModel(nn.Module):
         self.batch_norm = nn.BatchNorm1d(hidden_size) 
         self.dropout = nn.Dropout(dropout_ratio)
         self.init_weights()
-        self.attention_maps = {'fused_output1': [], 'fused_output2': []} 
-        
-        
+    
         #self.fc = MLPLayer(input_dim=node_num*hidden_size, output_dim=2, L=2)
         self.fc = nn.Sequential(
             nn.Linear(25*128*4, 128*4), 
@@ -171,8 +168,6 @@ for epoch in range(num_epochs):
         best_model_state = model.state_dict().copy()
 
 torch.save(best_model_state, 'best_model.pth')
-
-
 model.load_state_dict(torch.load('best_model.pth'))
 model.eval()
 all_labels = []
